@@ -31,11 +31,39 @@
         <button class="timeSelect" id="monthly">Monthly</button>
       </div>
     </header>
+    <main id="content"></main>
   <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Gillian Akpeki</a>.
   </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      type="text/javascript"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        let timeType = "daily";
+        let previousTime = "Yesterday - ";
+        $.getJSON("./data.json", function (data) {
+          data.map((value) => {
+            console.log(value);
+            $("#content").append(
+              "<article><div class='row'><h1>" +
+                value.title +
+                "</h1><svg></svg></div><div class='row\"'><h2>" +
+                value.timeframes[timeType].current +
+                " hrs</h2><h3>" +
+                previousTime +
+                value.timeframes[timeType].previous +
+                " hrs</h3></div></article>"
+            );
+          });
+        });
+      });
+    </script>
 </body>
 </html>
