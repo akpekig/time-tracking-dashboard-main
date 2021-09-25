@@ -7,7 +7,7 @@ $(function () {
       $("#content").append(
         "<article><div class='row'><h1>" +
           value.title +
-          "</h1><svg></svg></div><div class='row\"'><h2>" +
+          "</h1><img src=\'./images/icon-ellipsis.svg\'></img></div><div class='row\"'><h2>" +
           value.timeframes[timeType].current +
           " hrs</h2><h3>" +
           previousTime +
