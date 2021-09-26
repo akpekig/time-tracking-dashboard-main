@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+$blue: hsl(246, 80%, 60%);
+$light-red-i: hsl(15, 100%, 70%);
+$soft-blue: hsl(195, 74%, 62%);
+$light-red-ii: hsl(348, 100%, 68%);
+$lime-green: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$soft-orange: hsl(43, 84%, 65%);
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+$off-white: rgba(255, 255, 255, 0.5);
+
+html {
+    height: 100vh;
+    width: 100vw;
+    padding: 150px 0px;
+    background-color: $very-dark-blue;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+body {
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.active {
+    color: white !important;
+    &:hover {
+        cursor: default !important;
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.card, .card#header, .wrapper, #content article {
+    border-radius: 20px;
+}
+
+.card#header, .wrapper {
+    padding: 30px;
+}
+
+.card {
+    background-color: $dark-blue;
+    &#header {
+        display: flex;
+        flex-direction: row;
+        background-color: $blue;
+        img {
+            border-radius: 100%;
+            border: 5px solid white;
+        }
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content:center;
+            margin: 15px 0px 0px 15px;
+            h1 {
+                margin-top:  0 !important;
+            }
+        }
+    }
+}
+
+.icon-wrapper {
+    direction: rtl;
+    position: relative;
+    max-height: 84px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: -1;
+    &#work {
+        background-color: $light-red-i;
+    }
+    &#play {
+        background-color: $soft-blue;
+    }
+    &#study {
+        background-color: $light-red-ii;
+    }
+    &#exercise {
+        background-color: $lime-green;
+    }
+    &#social {
+        background-color: $violet;
+    }
+    &#self-care {
+        background-color: $soft-orange;
+    }
+    &#social, &#self-care {
+        height: 60px;
+    }
+}
+
+.inactive {
+    color: $off-white;
+    font-weight: 300;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-select {
+    border:0px;
+    background: none;
+    color: $off-white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    &:hover, &:focus, &:focus-within, &:active {
+        color: white;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.wrapper {
+    position: relative;
+    margin-top: -16px;
+    background-color: $dark-blue;
+    z-index: 1;
+    &:hover {
+        cursor: pointer;
+        background-color: $desaturated-blue;
+    }
+}
+
+#content {
+    height: 70%;
+    article {
+        margin: 0px 0px 20px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        overflow-y: hidden;
+        width: 66.667% !important;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    article {
+        flex-basis: 30%;
+        margin: 10px !important;
+    }
+
+    h1 {
+        margin-bottom: auto;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    .attribution {
+        width: 164px;
+        padding: 5px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        border-radius: 10px;
+        background-color: chocolate;
+        word-wrap: normal;
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        height: 133px;
+    }
+
+    .col, #col {
+        flex-direction: column !important;
+        justify-content: normal !important;
+        align-items: normal !important;
+    }
+
+    .text-wrapper {
+        margin-top: 50px !important;
+    }
+    
+}
+
